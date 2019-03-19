@@ -1,16 +1,18 @@
 # RK chat server + client
 ## Zagon
 ### chat server
-- zaženi server `./chatServer.py` ali `python3 chatServer.py`),
+- zaženi server
+  - `./chatServer.py` ali `python3 chatServer.py`),
 ### chat client
-- zaženi klient(e) `./chatClient.py` ali `python3 chatClient.py`).
+- zaženi klient(e)
+  - `./chatClient.py` ali `python3 chatClient.py`).
 
 ## Uporaba
 - če hočeš poslati javno sporočilo, ga vtipkaj v konzolo,
 - če hočeš poslati zasebno sporočilo, predenj vtipkaj `@<ime uporabnika>`,
   če hočeš npr. pozdraviti Janeza, vtipkaj `@Janez pozdravljen`,
 
-## Primer uporabe
+### primer uporabe
 - Profesor:
 >  $ ./chatClient.py  
 >  Uporabniško ime: profesor  
@@ -44,3 +46,5 @@
 ## Lastnosti
   - Znak "|" ni dovoljen,
   - vedno se izpiše čas pošiljanja sporočila.
+
+  
