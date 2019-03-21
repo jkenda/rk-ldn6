@@ -70,7 +70,16 @@ def message_receiver():
             sys.exit()
 
 # pridobi uporabniško ime
-username = input("Uporabniško ime: ")
+badUsername = True
+while badUsername == True:
+    username = input("Uporabniško ime: ")
+    for i in range(len(username)):
+        if username[i] == " " or username[i] == "@" or username[i] == "|":
+            print("Neveljaven znak uporabniškega imena: \"" + username[i] + "\"")
+            badUsername = True
+            break
+        else:
+            badUsername = False
 
 # povezi se na streznik
 print("[system] connecting to chat server ...")
@@ -102,7 +111,7 @@ while napaka == False:
                 i = 0
             send_message(sock,str(time.time()) + "|" + username + "|" + naslovnik + "|" + msg_send[i:])
         else:
-            print("Napaka: nedovoljen znak |")
+            print("Napaka: nedovoljen znak: \"|\"")
     except KeyboardInterrupt:
         sock.close()
         sys.exit()
